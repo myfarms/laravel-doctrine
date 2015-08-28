@@ -92,6 +92,8 @@ class LaravelDoctrineServiceProvider extends ServiceProvider
             $metadata->setDefaultRepositoryClassName($config['repository']);
             $metadata->setSQLLogger($config['logger']);
 
+            $metadata = $this->customConfig($metadata);
+
             if (isset($config['proxy']['namespace']))
                 $metadata->setProxyNamespace($config['proxy']['namespace']);
 
@@ -102,6 +104,12 @@ class LaravelDoctrineServiceProvider extends ServiceProvider
             return $entityManager;
         });
         $this->app->singleton(EntityManagerInterface::class, EntityManager::class);
+    }
+
+    public function customConfig($metadata)
+    {
+        // Extend to add custom config
+        return $metadata;
     }
 
     private function registerClassMetadataFactory()
