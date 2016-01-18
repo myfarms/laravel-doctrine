@@ -1,5 +1,5 @@
 {
-    "name": "mitchellvanw/laravel-doctrine",
+    "name": "myfarms/laravel-doctrine",
     "description": "The Doctrine 2 implementation that melts with Laravel 4",
     "version": "0.5.1",
     "keywords": ["doctrine", "doctrine 2", "orm", "laravel"],
@@ -16,14 +16,14 @@
         "doctrine/orm": "2.5.*",
         "doctrine/migrations": "1.*"
     },
-	"require-dev": {
-		"mockery/mockery": "dev-master",
-		"phpunit/phpunit": "3.7.*"
-	},
+    "require-dev": {
+        "mockery/mockery": "dev-master",
+        "phpunit/phpunit": "3.7.*"
+    },
     "autoload": {
         "psr-4": {
             "Mitch\\LaravelDoctrine\\": "src/",
-	        "Tests\\": "tests/"
+            "Tests\\": "tests/"
         }
     },
     "minimum-stability": "dev"
